@@ -7,34 +7,37 @@ Import Sanduuz Log Formatter (SLF) as a module and test it's capabilities.
 import logging
 from slf import SanduuzLogFormatter
 
-LOG_LEVEL = logging.DEBUG
-
-formatter = SanduuzLogFormatter(datefmt="%Y-%m-%d %H:%M:%S")
+formatter = SanduuzLogFormatter()
 
 stream_handler = logging.StreamHandler()
 stream_handler.setFormatter(formatter)
 
 logger = logging.getLogger()
 logger.addHandler(stream_handler)
-logger.setLevel(LOG_LEVEL)
+logger.setLevel(logging.INFO)
 
 
+# 17 characters
 def even_shorter_name(message: str) -> None:
     logger.info(message)
 
 
+# 26 characters
 def function_with_shorter_name(message: str) -> None:
     logger.info(message)
 
 
+# 36 characters
 def function_with_a_relatively_long_name(message: str) -> None:
     logger.info(message)
 
 
+# 46 characters
 def function_with_a_really_really_really_long_name(message: str) -> None:
     logger.info(message)
 
 
+# 77 characters
 def function_with_a_really_long_super_duper_name_used_purely_for_testing_purposes(message: str) -> None:
     logger.info(message)
 

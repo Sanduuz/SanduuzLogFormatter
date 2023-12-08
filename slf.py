@@ -4,8 +4,9 @@ from logging import Formatter
 
 
 class SanduuzLogFormatter(Formatter):
-    def __init__(self, datefmt=None):
+    def __init__(self, datefmt="%Y-%m-%d %H:%M:%S", info_section_max_length=50):
         super(SanduuzLogFormatter, self).__init__(datefmt=datefmt)
+        self.info_section_max_length = info_section_max_length
 
     def formatTime(self, record, datefmt=None):
         """ Override the formatTime method to use the specified datefmt. """
@@ -16,7 +17,7 @@ class SanduuzLogFormatter(Formatter):
 
     def format(self, record):
         """ Add custom formatting with info section truncation if max limit is exceeded. """
-        info_section_max_length = 50
+        info_section_max_length = self.info_section_max_length
 
         # Info section max length - module name length - length of linenumber - 3 dots - 2 separators (':').
         max_funcname_length = info_section_max_length - len(record.module) - len(str(record.lineno)) - 3 - 2
