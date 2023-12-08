@@ -6,9 +6,9 @@ Sanduuz Log Formatter is a custom log formatter for the python logging library.
 
 ```python
 import logging
-from sanduuzlogformatter import SanduuzLogFormatter
+from sanduuzlogformatter import SLF
 
-formatter = SanduuzLogFormatter()
+formatter = SLF()
 
 stream_handler = logging.StreamHandler()
 stream_handler.setFormatter(formatter)
@@ -25,11 +25,11 @@ logger.info("This is a message from SLF!")
 A custom date format can be given to the formatter during initialization:
 
 ```python3
-formatter = SanduuzLogFormatter(datefmt="%Y-%m-%d")
+formatter = SLF(datefmt="%Y-%m-%d")
 ```
 
 A custom maximum length for the info section `| module:function:linenumber |` can be given to the formatter during initialization:
 
 ```python3
-formatter = SanduuzLogFormatter(info_section_max_length=75)
+formatter = SLF(info_section_max_length=75)
 ```
