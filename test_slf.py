@@ -5,7 +5,7 @@ Import Sanduuz Log Formatter (SLF) as a module and test it's capabilities.
 """
 
 import logging
-from slf import SanduuzLogFormatter
+from sanduuzlogformatter import SanduuzLogFormatter
 
 formatter = SanduuzLogFormatter()
 

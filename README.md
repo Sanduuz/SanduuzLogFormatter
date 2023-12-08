@@ -6,7 +6,7 @@ Sanduuz Log Formatter is a custom log formatter for the python logging library.
 
 ```python
 import logging
-from slf import SanduuzLogFormatter
+from sanduuzlogformatter import SanduuzLogFormatter
 
 formatter = SanduuzLogFormatter()
 
