@@ -4,7 +4,7 @@ Sanduuz Log Formatter is a custom log formatter for the python logging library.
 
 ### Installation
 
-SLF can now be installed through the [Python Packaging Index](https://pypi.org/project/sanduuzlogformatter/):
+SLF can now be installed through the [Python Package Index](https://pypi.org/project/sanduuzlogformatter/):
 
 `python3 -m pip install sanduuzlogformatter`
 
