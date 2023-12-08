@@ -5,9 +5,9 @@ Import Sanduuz Log Formatter (SLF) as a module and test it's capabilities.
 """
 
 import logging
-from sanduuzlogformatter import SanduuzLogFormatter
+from sanduuzlogformatter import SLF
 
-formatter = SanduuzLogFormatter()
+formatter = SLF()
 
 stream_handler = logging.StreamHandler()
 stream_handler.setFormatter(formatter)

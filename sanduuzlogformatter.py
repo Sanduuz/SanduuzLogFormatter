@@ -3,9 +3,9 @@
 from logging import Formatter
 
 
-class SanduuzLogFormatter(Formatter):
+class SLF(Formatter):
     def __init__(self, datefmt="%Y-%m-%d %H:%M:%S", info_section_max_length=50):
-        super(SanduuzLogFormatter, self).__init__(datefmt=datefmt)
+        super(SLF, self).__init__(datefmt=datefmt)
         self.info_section_max_length = info_section_max_length
 
     def formatTime(self, record, datefmt=None):
@@ -13,7 +13,7 @@ class SanduuzLogFormatter(Formatter):
         if datefmt:
             self.datefmt = datefmt
 
-        return super(SanduuzLogFormatter, self).formatTime(record, self.datefmt)
+        return super(SLF, self).formatTime(record, self.datefmt)
 
     def format(self, record):
         """ Add custom formatting with info section truncation if max limit is exceeded. """
@@ -36,4 +36,4 @@ class SanduuzLogFormatter(Formatter):
         )
         record.msg = msg
 
-        return super(SanduuzLogFormatter, self).format(record)
+        return super(SLF, self).format(record)
